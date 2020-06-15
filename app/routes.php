@@ -25,5 +25,7 @@ return function (App $app) {
     });
 
     $app->get('/movies/test', 'MoviesController:test');
-
+    $app->get('/movies', 'MoviesController:index');
+    $app->get('/movies/{id}', 'MoviesController:read');
+    $app->post('/movies', 'MoviesController:store');    
 };
