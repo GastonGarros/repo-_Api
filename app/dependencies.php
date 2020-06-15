@@ -26,13 +26,13 @@ return function (ContainerBuilder $containerBuilder) {
         },
         'db' => function(ContainerInterface $c){
             $settings = $c->get('settings');
-            var_dump($settings);
+          
             $db = $settings['db'];
            
-          //  $pdo = new PDO('mysql:host=' . $db['host'] . ';dbname=' . $db['dbname'] . ';port=' . $db['port'],
-            //   $db['user'], $db['pass']);
-            $pdo = new PDO('mysql:host=localhost;dbname=moviedb;port=3306',
-              "root", "root");
+            $pdo = new PDO('mysql:host=' . $db['host'] . ';dbname=' . $db['dbname'] . ';port=' . $db['port'],
+           $db['user'], $db['pass']);
+           // $pdo = new PDO('mysql:host=localhost;dbname=moviedb;port=3306',
+            //  "root", "root");
                     
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);

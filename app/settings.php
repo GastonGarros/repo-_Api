@@ -15,11 +15,11 @@ return function (ContainerBuilder $containerBuilder) {
                 'level' => Logger::DEBUG,
             ],
             'db' => [
-                'host' => getenv('DATABASE_HOST'),
-                'dbname' => getenv('DATABASE_NAME'),
-                'user' => getenv('DATABASE_USER'),
-                'pass' => getenv('DATABASE_PASS'),
-                'port' => getenv('DATABASE_PORT'),
+                'host' => env('DATABASE_HOST'),
+                'dbname' => env('DATABASE_NAME'),
+                'user' => env('DATABASE_USER'),
+                'pass' => env('DATABASE_PASS'),
+                'port' => env('DATABASE_PORT'),
             ],
            
         ],

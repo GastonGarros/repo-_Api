@@ -29,5 +29,5 @@ return function (App $app) {
     $app->get('/movies/{id}', 'MoviesController:read');
     $app->post('/movies', 'MoviesController:store');  
     
-    $app->delete('/movies/delete/{id}', 'MoviesController:delete');  
+    $app->delete('/movies/{id}', 'MoviesController:delete');  
 };

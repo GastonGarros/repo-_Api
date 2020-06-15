@@ -36,7 +36,7 @@ class Movie
         $sql = "delete from movies where id = $id";
     $sentencia = $this->db->prepare($sql);
     $sentencia->execute();
-
+    
     return $sentencia->execute();
       
 

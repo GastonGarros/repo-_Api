@@ -47,7 +47,7 @@ class MoviesController {
     }  
 
     public function delete ($request, $response,$args){
-      //  $params = $request->getParsedBody();
+     
         $rep = $this->model->delete($args['id']);
         $response->getBody()->write(\json_encode($rep));
         return $response->withHeader('Content-Type', 'application/json');  
