@@ -23,9 +23,11 @@ return function (App $app) {
         $group->get('', ListUsersAction::class);
         $group->get('/{id}', ViewUserAction::class);
     });
-
+//metodos HTTP
     $app->get('/movies/test', 'MoviesController:test');
     $app->get('/movies', 'MoviesController:index');
     $app->get('/movies/{id}', 'MoviesController:read');
-    $app->post('/movies', 'MoviesController:store');    
+    $app->post('/movies', 'MoviesController:store');  
+    
+    $app->delete('/movies/delete/{id}', 'MoviesController:delete');  
 };

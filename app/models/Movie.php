@@ -31,4 +31,14 @@ class Movie
         $sentencia->execute($movie);
         return $this->db->lastInsertId();        
     }
+
+    public function delete($id){
+        $sql = "delete from movies where id = $id";
+    $sentencia = $this->db->prepare($sql);
+    $sentencia->execute();
+
+    return $sentencia->execute();
+      
+
+    }
 }
